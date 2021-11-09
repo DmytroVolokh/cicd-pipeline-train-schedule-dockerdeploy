@@ -27,7 +27,7 @@ pipeline {
             }
             steps {
                 script {
-                    docker.withRegistry('https://hub.docker.com/', 'dima') {
+                    docker.withRegistry('https://hub.docker.com/', 'volokh') {
                         app.push("${env.BUILD_NUMBER}")
                         app.push("latest")
                     }
